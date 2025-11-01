@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ====== BODY / SCROLL ====== */
+html, body {
+    font-family: "Momo Trust Display", sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;          /* remove scroll horizontal */
+    scrollbar-width: none;       /* Firefox */
+    padding-bottom: 50px;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;                  /* Chrome, Edge, Safari */
+    background: transparent;
+}
+
+/* ====== HEADER / NAVBAR ====== */
+header {
+    background-color: transparent;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+}
+
+.nav-list ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* ===== RESPONSIVO NAV ====== */
+@media screen and (max-width: 730px) {
+    .nav-list,
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* ====== SEÇÕES / BANNERS ====== */
+.banner-section,
+.local-section,
+.confirmacao-section,
+.presente-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ====== BANNER 1 ====== */
+.banner-section {
+    background-image: url("../img/20taoBanner.svg");
+}
+
+/* ====== BANNER 1 CONTENT ====== */
+.banner-content {
+    margin-top: 350px; /* remove margens negativas */
+    margin-bottom: 0; /* Remove margem negativa */
+    max-width: 90%;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: 42px;
+}
+
+.banner-content p {
+    font-size: 20px;
+}
+
+/* ====== BANNER 2 / LOCAL ====== */
+.local-section {
+    background-image: url("../img/20taolocal.svg");
+}
+
+.endereco{
+    margin-top: 100px;
+}
+
+.local-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.local-section p {
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+.map-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0,0,0,0.4);
+}
+
+/* ====== BANNER 3 / CONFIRMAÇÃO ====== */
+.confirmacao-section {
+    background-image: url("../img/20taoconfirme.svg");
+}
+
+.confirmacao-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.confirmacao-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.confirm-button {
+    padding: 22px 180px;
+    font-size: 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 38px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Momo Trust Display", sans-serif;
+    text-transform: uppercase;
+}
+
+.confirm-button:hover {
+    background-color: #ffffff;
+}
+
+/* ====== BANNER 4 / PRESENTE ====== */
+.presente-section {
+    background-image: url("../img/20taopresente.svg"); 
+}
+
+.presente-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.presente-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.present-button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #4771b0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.present-button:hover {
+    background-color: #365a8b;
+}
+
+/* Rodapé */
+.footer-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    border-top: 1px solid #000000;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-content .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-content .social-links a:hover {
+    color: #4771b0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-section {
+        font-size: 12px;
+        padding: 20px 10px;
+    }
+
+    .footer-content .social-links a {
+        margin: 0 3px;
+    }
+}
